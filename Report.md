@@ -6,9 +6,6 @@ I based my implementation off the code based of the Deep Learning Deep Q-network
 I adapted that code from the OpenAI gym LunarLanger environment to fit the the banana collector environment where the agent was tasked with collecting yellow bananas vs blue bananas.
 
 Two main pieces of code were used from the OpenAI gym in this project:
-* model.py:
-    * This includes a pytorch deep neural network, this network is what is used to determine which actions the agent will take to get more rewards.
-
 * dqn_agent.py:
     * This file includes two classes
         * Agent - Which Interacts with and learns from the environment.
@@ -18,6 +15,9 @@ Two main pieces of code were used from the OpenAI gym in this project:
             * reward
             * next_state
             * done
+
+* model.py:
+    * This includes a pytorch deep neural network, this network is what is used to determine which actions the agent will take to get more rewards.
 
 * We then used a Jupter notebook to put everything together to train the agent in the enviorment. This is where we modified the code to work with the Banana Collector enviorment instead of the LunarLander. Here we modified where the action, next_state, reward, and done variables came from.
 
