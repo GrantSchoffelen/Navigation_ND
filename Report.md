@@ -21,6 +21,20 @@ Two main pieces of code were used from the OpenAI gym in this project:
 
 * We then used a Jupter notebook to put everything together to train the agent in the enviorment. This is where we modified the code to work with the Banana Collector enviorment instead of the LunarLander. Here we modified where the action, next_state, reward, and done variables came from.
 
+## Model architecture
+The model architecture is the same used in the Human-level control through deep reinforcement learning paper - https://storage.googleapis.com/deepmind-media/dqn/DQNNaturePaper.pdf
+
+"The input to the neural network consists of an 84 X 84 X 4 image produced by the preprocessing map. The first hidden layer convolves 32 filters of 8 X 8 with stride 4 with the input image and applies a rectifier nonlinearity31,32. The second hidden layer convolves 64 filters of 4 X 4 with stride 2, again followed by a rectifier nonlinearity. This is followed by a third convolutional layer that convolves 64 filters of 3 3 3 with
+stride 1 followed by a rectifier. The final hidden layer is fully-connected and consists of 512 rectifier units. The output layer is a fully-connected linear layer with a single output for each valid action. The number of valid actions varied between 4 and 18 on the games we considered."
+
+Schematic of Model:
+![Chart](model_arc.png)
+
+
+Our model had 4 valid actions
+
+
+
 ## Learning Algorithm
 The learning Algorithm used was the Deep Q Learning Algorithm which combined reinforcement learning with a deep nueral network.
 
@@ -41,7 +55,7 @@ UPDATE_EVERY = 4        # how often to update the network
 
 
 ## Plot of Rewards
-![GitHub Logo](chart.png)"Trained Agent"
+![Chart](chart.png)"Trained Agent"
 
 
 ## Ideas for Future Work
